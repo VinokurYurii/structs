@@ -22,7 +22,7 @@ func main() {
 			zipCode: 12345,
 		},
 	}
-	(&jim).updateName("Jimmy")
+	jim.updateName("Jimmy")
 	jim.print()
 }
 
