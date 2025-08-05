@@ -24,6 +24,19 @@ func main() {
 	}
 	jim.updateName("Jimmy")
 	jim.print()
+
+	// var colors map[string]string
+	// colors := make(map[string]string)
+	colors := map[string]string{
+		"red":   "#ff0000",
+		"green": "#00ff00",
+		"blue":  "#0000ff",
+	}
+
+	colors["white"] = "#ffffff"
+	delete(colors, "red")
+
+	fmt.Println(colors)
 }
 
 func (pp *person) updateName(newName string) {
@@ -31,5 +44,5 @@ func (pp *person) updateName(newName string) {
 }
 
 func (p person) print() {
-	fmt.Printf("%+v", p)
+	// fmt.Printf("%+v", p)
 }
