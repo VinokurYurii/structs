@@ -31,12 +31,16 @@ func main() {
 		"red":   "#ff0000",
 		"green": "#00ff00",
 		"blue":  "#0000ff",
+		"white": "#ffffff",
 	}
 
-	colors["white"] = "#ffffff"
-	delete(colors, "red")
+	printMap(colors)
+}
 
-	fmt.Println(colors)
+func printMap(m map[string]string) {
+	for color, hex := range m {
+		fmt.Println("Hex code for", color, "is", hex)
+	}
 }
 
 func (pp *person) updateName(newName string) {
